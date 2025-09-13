@@ -6,7 +6,7 @@ import AvatarBox from './AvatarBox'
 const Navbar = () => {
     const [loggedIn, setloggedIn] = useState(false)
     return (
-        <header className="fixed top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
+        <header className="fixed top-0 z-50 w-full border-b bg-background/20 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
 
         <nav className='flex justify-between p-6 items-center h-16'>
             <div className="flex gap-2">
