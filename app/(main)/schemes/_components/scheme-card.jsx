@@ -18,7 +18,7 @@ const SchemeCard = ({ scheme }) => {
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
           <CardTitle className="text-xl">{scheme.name}</CardTitle>
-          <div className="flex gap-2">
+          <div className="flex flex-col md:flex-row gap-2">
             <Badge
               variant={scheme.status === "Active" ? "default" : "secondary"}
               className="rounded-full"
