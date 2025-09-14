@@ -124,7 +124,7 @@
   @apply bg-gradient-to-r from-emerald-900 via-emerald-700 to-emerald-500;
 }
 @utility gradient-title{
-  @apply gradient font-bold text-transparent bg-clip-text pb-1 pr-2;
+  @apply gradient font-extrabold text-transparent bg-clip-text pb-1 pr-2;
 }
 /* Floating Sidebar Styles */
 /* Floating Sidebar Styles */
