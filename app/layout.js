@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <Navbar />
 
         {/* Sidebar only on large screens */}
-        <div className="hidden 2xl:block">
+        <div className="hidden xl:block">
           <Sidebar />
         </div>
 
@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         {/* <footer className="bg-red-300 text-center py-2">Hello</footer> */}
 
         {/* Bottom bar only on mobile/tablet */}
-        <div className="2xl:hidden">
+        <div className="xl:hidden">
           <BottomBar />
         </div>
       </body>
