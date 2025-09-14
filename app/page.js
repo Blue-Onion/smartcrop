@@ -14,13 +14,13 @@ export default function Home() {
         <div className="relative mx-auto max-w-5xl md:max-w-6xl lg:max-w-7xl mt-12 space-y-6 grid grid-rows-2 2xl:grid-cols-2 gap-2 ">
           <div className="flex flex-col gap-7 items-start">
             <div className="text-5xl md:text-6xl lg:text-7xl text-center justify-start items-start font-extrabold flex flex-col gap-2">
-              <div>Smart Crop</div>
-              <div className="gradient-title">Advisory</div>
+              <h2>Smart Crop</h2>
+              <h2 className="gradient-title">Advisory</h2>
             </div>
             <p className="max-w-xl text-emerald-900 flex justify-start items-start">
               Improve your farming with modern technology. Get crop care, weather updates, and market prices with the help of AI.
             </p>
-            <div className="flex gap-2 items-center justify-center">
+            <div className="flex flex-col md:flex-row gap-2 items-center justify-center">
               <Button size={"lg"} variant={"primary"}>
                 <CloudSun />
                 Check today's weather
@@ -61,6 +61,20 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+      <section className="py-20">
+        <div className="flex flex-col container mx-auto">
+          <div className="flex">
+<h3 className="text-3xl font-bold">Complete Farming Solution</h3>
+          </div>
+          <div className=""></div>
+
+
+        </div>
+      </section>
+      <section className="bg-emerald-800">
+
+
       </section>
     </div>
   );
