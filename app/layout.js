@@ -2,10 +2,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
+import BottomBar from "@/components/BottomBar";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
-
 
 export const metadata = {
   title: "Create Next App",
@@ -14,18 +14,27 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="light" >
-      <body
-        className={`${inter.className} bg-[#F8F8F6]`}
-      >
+    <html lang="en" className="light">
+      <body className={`${inter.className} bg-[#F8F8F6]`}>
         <Navbar />
-        <Sidebar/>
-        <main className="  min-h-screen ">
+
+        {/* Sidebar only on large screens */}
+        <div className="hidden 2xl:block">
+          <Sidebar />
+        </div>
+
+        {/* Main content with margin for sidebar */}
+        <main className="min-h-screen">
           {children}
         </main>
-        <footer className="bg-red-300">
-          Hello
-        </footer>
+
+        {/* Footer (optional, you can keep/remove depending on design) */}
+        {/* <footer className="bg-red-300 text-center py-2">Hello</footer> */}
+
+        {/* Bottom bar only on mobile/tablet */}
+        <div className="2xl:hidden">
+          <BottomBar />
+        </div>
       </body>
     </html>
   );

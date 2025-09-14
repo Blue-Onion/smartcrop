@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="">
-      <section className="relative w-full h-[900px] md:h-[700px] p-20 mt-16 bg-[url('/banner.png')] bg-cover bg-center">
+      <section className="relative w-full h-[900px] md:h-[700px] 2xl:h-[750px] p-20 mt-16 bg-[url('/banner.png')] bg-cover bg-center">
         {/* Overlay for blur + white tint */}
         <div className="absolute inset-0 bg-white/50 backdrop-blur-sm"></div>
         <div className="relative mx-auto max-w-5xl md:max-w-6xl lg:max-w-7xl mt-12 space-y-6 grid grid-rows-2 2xl:grid-cols-2 gap-2 ">
