@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         </div>
 
         {/* Main content with margin for sidebar */}
-        <main className="min-h-screen max-w-7xl mx-auto">
+        <main className="min-h-screen">
           {children}
         </main>
 

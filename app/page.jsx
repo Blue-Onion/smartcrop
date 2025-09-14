@@ -20,7 +20,7 @@ export default function Home() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-white/50 backdrop-blur-sm"></div>
 
-        <div className="relative mx-auto max-w-7xl mt-8 grid grid-cols-1 xl:grid-cols-2 gap-8">
+        <div className="relative mx-auto max-w-6xl mt-8 grid grid-cols-1 xl:grid-cols-2 gap-8">
           {/* Left Content */}
           <div className="flex flex-col gap-6 items-start text-center md:text-left">
             <div className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl  font-extrabold flex md:flex-col gap-2">
@@ -71,7 +71,7 @@ export default function Home() {
         </div>
       </section>
       <section className="p-10 space-y-4">
-        <div className="mx-auto gap-8 flex flex-col max-w-7xl mt-8">
+        <div className="mx-auto gap-8 flex flex-col max-w-6xl mt-8">
           <div className="text-center space-y-2">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
               Complete Farming Solution
@@ -121,7 +121,7 @@ export default function Home() {
         </div>
       </section>
       <section className="p-10 bg-gradient-to-r from-[#235F4B] to-[#278767] text-white space-y-4">
-        <div className="mx-auto gap-8 flex flex-col max-w-7xl mt-8">
+        <div className="mx-auto gap-8 flex flex-col max-w-6xl mt-8">
           <div className="text-center space-y-2">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
               Empowering Indian Farmers
@@ -179,7 +179,7 @@ export default function Home() {
       </section>
        <section className="p-10 bg-gradient-to-r from-[#235F4B] to-[#278767] text-white space-y-4">
         <footer className=" text-white py-12 px-6 md:px-20">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         {/* About */}
         <div className="space-y-3">
           <h2 className="text-xl font-bold">Smart Crop Advisory</h2>
