@@ -34,7 +34,7 @@ export default function Home() {
 
           {/* Right Features */}
           <div className="flex items-start">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
               {features.map((feature, idx) => {
                 const Icon = feature.icon;
                 return (
