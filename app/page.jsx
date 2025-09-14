@@ -120,7 +120,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="p-10 bg-gradient-to-r from-emerald-800 to-emerald-600 text-white space-y-4">
+      <section className="p-10 bg-gradient-to-r from-[#235F4B] to-[#278767] text-white space-y-4">
         <div className="mx-auto gap-8 flex flex-col max-w-7xl mt-8">
           <div className="text-center space-y-2">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
