@@ -7,7 +7,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
@@ -20,6 +19,7 @@ import { schemes } from "@/lib/scheme";
 import SchemeCard from "./_components/scheme-card";
 import { Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ChatBot from "./_components/chat-bot"; // Import the chatbot
 
 const Page = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -80,52 +80,50 @@ const Page = () => {
 
           <CardContent className="space-y-3">
             {/* Search + Filters inline */}
-            {/* Search + Filters inline */}
-<div className="flex flex-col md:flex-row gap-3">
-  {/* Search Input */}
-  <div className="relative flex-1">
-    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-    <Input
-      placeholder="Search by name or description..."
-      className="w-full pl-10"
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-    />
-  </div>
+            <div className="flex flex-col md:flex-row gap-3">
+              {/* Search Input */}
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+                <Input
+                  placeholder="Search by name or description..."
+                  className="w-full pl-10"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+              </div>
 
-  {/* Selects in one line */}
-  <div className="flex flex-row gap-2 w-full md:w-auto">
-    {/* Category Select */}
-    <Select value={category} onValueChange={setCategory}>
-      <SelectTrigger className="w-1/2 md:w-40">
-        <SelectValue placeholder="Category" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectItem value="all">All</SelectItem>
-        <SelectItem value="financial">Financial</SelectItem>
-        <SelectItem value="insurance">Insurance</SelectItem>
-        <SelectItem value="technical">Technical</SelectItem>
-        <SelectItem value="subsidies">Subsidies</SelectItem>
-        <SelectItem value="technology">Technology</SelectItem>
-      </SelectContent>
-    </Select>
+              {/* Selects in one line */}
+              <div className="flex flex-row gap-2 w-full md:w-auto">
+                {/* Category Select */}
+                <Select value={category} onValueChange={setCategory}>
+                  <SelectTrigger className="w-1/2 md:w-40">
+                    <SelectValue placeholder="Category" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All</SelectItem>
+                    <SelectItem value="financial">Financial</SelectItem>
+                    <SelectItem value="insurance">Insurance</SelectItem>
+                    <SelectItem value="technical">Technical</SelectItem>
+                    <SelectItem value="subsidies">Subsidies</SelectItem>
+                    <SelectItem value="technology">Technology</SelectItem>
+                  </SelectContent>
+                </Select>
 
-    {/* State Select */}
-    <Select value={state} onValueChange={setState}>
-      <SelectTrigger className="w-1/2 md:w-40">
-        <SelectValue placeholder="State" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectItem value="all-india">All India</SelectItem>
-        <SelectItem value="kerala">Kerala</SelectItem>
-        <SelectItem value="punjab">Punjab</SelectItem>
-        <SelectItem value="maharashtra">Maharashtra</SelectItem>
-        <SelectItem value="tamil-nadu">Tamil Nadu</SelectItem>
-      </SelectContent>
-    </Select>
-  </div>
-</div>
-
+                {/* State Select */}
+                <Select value={state} onValueChange={setState}>
+                  <SelectTrigger className="w-1/2 md:w-40">
+                    <SelectValue placeholder="State" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all-india">All India</SelectItem>
+                    <SelectItem value="kerala">Kerala</SelectItem>
+                    <SelectItem value="punjab">Punjab</SelectItem>
+                    <SelectItem value="maharashtra">Maharashtra</SelectItem>
+                    <SelectItem value="tamil-nadu">Tamil Nadu</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
 
             {/* Results count */}
             <div className="flex justify-between items-center">
@@ -159,6 +157,8 @@ const Page = () => {
           </CardContent>
         </Card>
       </div>
+     
+      <ChatBot />
     </div>
   );
 };

@@ -94,6 +94,8 @@ const SchemeCard = ({ scheme }) => {
             size="sm"
             className="h-7 w-7 p-0"
             onClick={() => setExpanded(!expanded)}
+            aria-label={expanded ? "Collapse eligibility" : "Expand eligibility"}
+            aria-expanded={expanded}
           >
             {expanded ? (
               <ChevronUp className="h-4 w-4" />
