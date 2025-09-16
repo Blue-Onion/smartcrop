@@ -18,7 +18,7 @@ export default function Home() {
     <div className="">
       <section className="relative w-full h-auto  px-6 md:px-20 py-16 mt-16 bg-[url('/banner.png')] bg-cover bg-center">
         {/* Overlay */}
-        <div className="absolute inset-0 bg-white/50 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 "></div>
 
         <div className="relative mx-auto max-w-6xl mt-8 grid grid-cols-1 xl:grid-cols-2 gap-8">
           {/* Left Content */}

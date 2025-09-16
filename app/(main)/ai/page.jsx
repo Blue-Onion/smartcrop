@@ -11,6 +11,7 @@ import {
 import { CameraIcon, Upload, RefreshCw } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
+import ChatPage from "./_compnents/chatPlace";
 
 const Page = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -54,88 +55,7 @@ const Page = () => {
         </div>
 
         <div className="w-full">
-          <Card className="w-full p-5">
-            <CardHeader>
-              <CardTitle className="text-2xl">Crop Health Scanner</CardTitle>
-            </CardHeader>
-            <CardContent className="border-2 border-dotted rounded-md border-gray-300 h-[400px] md:h-[500px]">
-              <div className="flex flex-col justify-center items-center h-full w-full">
-                {!previewUrl ? (
-                  <>
-                    <div className="flex flex-col gap-3 items-center text-center">
-                      <CameraIcon className="text-emerald-500 h-16 w-16" />
-                      <p className="text-muted-foreground sm:text-xs md:text-lg">
-                        Take photos of your crops from your phone to identify diseases and pests
-                      </p>
-                    </div>
-
-                    <div className="flex flex-col md:flex-row gap-3 mt-5">
-                      {/* Hidden file input */}
-                      <Input
-                        ref={fileInputRef}
-                        type="file"
-                        accept="image/*"
-                        className="hidden"
-                        onChange={handleFileChange}
-                      />
-                      <Button
-                        variant="primary"
-                        onClick={() => fileInputRef.current?.click()}
-                      >
-                        <Upload className="mr-1" />
-                        Upload photo
-                      </Button>
-
-                      <Button variant="secondary">
-                        <CameraIcon className="mr-1" />
-                        Take photo
-                      </Button>
-                    </div>
-                  </>
-                ) : (
-                  <div className="flex flex-col justify-between items-center h-full w-full">
-                    {/* Change photo button */}
-                    <div className="w-full flex justify-end">
-                      <Input
-                        ref={changePhotoRef}
-                        type="file"
-                        accept="image/*"
-                        className="hidden"
-                        onChange={handleFileChange}
-                      />
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => changePhotoRef.current?.click()}
-                      >
-                        <RefreshCw className="mr-1 h-4 w-4" />
-                        Change Photo
-                      </Button>
-                    </div>
-
-                    {/* Image fills parent */}
-                    <div className="relative w-full flex-1 my-3">
-                      <Image
-                        src={previewUrl}
-                        alt="Crop preview"
-                        fill
-                        className="rounded-md object-cover"
-                      />
-                    </div>
-
-                    {/* Full-width check button */}
-                    <Button
-                      variant="primary"
-                      className="w-full my-2"
-                      onClick={handleCheckDiseases}
-                    >
-                      Check for Diseases
-                    </Button>
-                  </div>
-                )}
-              </div>
-            </CardContent>
-          </Card>
+          <ChatPage/>
         </div>
       </div>
     </div>
