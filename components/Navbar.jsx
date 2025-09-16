@@ -10,8 +10,8 @@ const Navbar = () => {
 
         <nav className='flex justify-between p-6 items-center h-16'>
             <div className="flex gap-2">
-                <div className="text-2xl text-black font-bold">Digital</div>
-                <div className="text-2xl text-green-800 font-bold">Farming</div>
+                <div className="text-2xl text-black font-bold">Agro</div>
+                <div className="text-2xl text-green-800 font-bold">Life</div>
 
             </div>
             <div className="">

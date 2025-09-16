@@ -23,14 +23,16 @@ export default function Home() {
         <div className="relative mx-auto max-w-6xl mt-8 grid grid-cols-1 xl:grid-cols-2 gap-8">
           {/* Left Content */}
           <div className="flex flex-col gap-6 items-start text-center md:text-left">
-            <div className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl  font-extrabold flex md:flex-col gap-2">
-              <h2>Smart Crop</h2>
-              <h2 className="gradient-title">Advisory</h2>
-            </div>
-            <p className="max-w-xl text-emerald-900 text-sm sm:text-base">
+
+  <h2 className="text-3xl  w-full text-center sm:text-4xl md:text-6xl lg:text-7xl font-extrabold">
+    Agro <span className="gradient-title">Life</span>
+  </h2>
+
+
+            <p className="max-w-xl text-emerald-900 w-full text-center text-sm sm:text-base">
               Improve your farming with modern technology. Get crop care, weather updates, and market prices with the help of AI.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto items-center">
+            <div className="flex flex-col sm:flex-row gap-3 w-full  justify-center items-center">
               <Button size={"lg"} variant={"primary"} className="w-full sm:w-auto">
                 <CloudSun className="mr-2" />
                 Check today's weather
