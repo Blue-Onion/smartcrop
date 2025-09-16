@@ -40,7 +40,7 @@ const CalculatorCard = () => {
     }, [cropData])
 
     return (
-        <div className="w-full mx-auto p-6 space-y-4">
+        <div className="w-full mx-auto space-y-4">
 
 
             <div className="flex gap-4 w-full flex-col md:flex-row">
