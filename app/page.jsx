@@ -24,22 +24,26 @@ export default function Home() {
           {/* Left Content */}
           <div className="flex flex-col gap-6 items-start text-center md:text-left">
 
-  <h2 className="text-3xl  w-full text-center sm:text-4xl md:text-6xl lg:text-7xl font-extrabold">
-    Agro <span className="gradient-title">Life</span>
-  </h2>
+            <h2 className="text-3xl  w-full text-center sm:text-4xl md:text-6xl lg:text-7xl font-extrabold">
+              Agro <span className="gradient-title">Life</span>
+            </h2>
 
 
-            <p className="max-w-xl text-emerald-900 w-full text-center text-sm sm:text-base">
+            <p className="max-w-xl text-white w-full text-center text-sm sm:text-base">
               Improve your farming with modern technology. Get crop care, weather updates, and market prices with the help of AI.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 w-full  justify-center items-center">
-              <Button size={"lg"} variant={"primary"} className="w-full sm:w-auto">
-                <CloudSun className="mr-2" />
-                Check today's weather
-              </Button>
-              <Button size={"lg"} variant={"secondary"} className="w-full sm:w-auto">
-                Start Now
-              </Button>
+              <Link href={"/weather"}>
+                <Button size={"lg"} variant={"primary"} className="w-full sm:w-auto">
+                  <CloudSun className="mr-2" />
+                  Check today's weather
+                </Button>
+              </Link>
+              <Link href={"/ai"}>
+                <Button size={"lg"} variant={"secondary"} className="w-full sm:w-auto">
+                  Start Now
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -179,45 +183,45 @@ export default function Home() {
         </div>
 
       </section>
-       <section className="p-10 bg-gradient-to-r from-[#235F4B] to-[#278767] text-white space-y-4">
+      <section className="p-10 bg-gradient-to-r from-[#235F4B] to-[#278767] text-white space-y-4">
         <footer className=" text-white py-12 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-        {/* About */}
-        <div className="space-y-3">
-          <h2 className="text-xl font-bold">Smart Crop Advisory</h2>
-          <p className="text-sm">
-            Empowering farmers with AI-driven agricultural solutions for better yields and sustainable farming practices.
-          </p>
-        </div>
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+            {/* About */}
+            <div className="space-y-3">
+              <h2 className="text-xl font-bold">Smart Crop Advisory</h2>
+              <p className="text-sm">
+                Empowering farmers with AI-driven agricultural solutions for better yields and sustainable farming practices.
+              </p>
+            </div>
 
-        {/* Features */}
-        <div className="space-y-3">
-          <h3 className="text-lg font-semibold">Features</h3>
-          <ul className="text-sm space-y-1">
-            <li>AI Crop Disease Detection</li>
-            <li>Weather-based Alerts</li>
-            <li>Multilingual Voice Support</li>
-            <li>Government Schemes Advisory</li>
-          </ul>
-        </div>
+            {/* Features */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-semibold">Features</h3>
+              <ul className="text-sm space-y-1">
+                <li>AI Crop Disease Detection</li>
+                <li>Weather-based Alerts</li>
+                <li>Multilingual Voice Support</li>
+                <li>Government Schemes Advisory</li>
+              </ul>
+            </div>
 
-        {/* Support */}
-        <div className="space-y-3">
-          <h3 className="text-lg font-semibold">Support</h3>
-          <ul className="text-sm space-y-1">
-            <li>24/7 Helpline: 1800-123-FARM</li>
-            <li>SMS Support: Send HELP to 56677</li>
-            <li>WhatsApp: +91-98765-43210</li>
-            <li>Email: support@smartcrop.in</li>
-          </ul>
-        </div>
-      </div>
+            {/* Support */}
+            <div className="space-y-3">
+              <h3 className="text-lg font-semibold">Support</h3>
+              <ul className="text-sm space-y-1">
+                <li>24/7 Helpline: 1800-123-FARM</li>
+                <li>SMS Support: Send HELP to 56677</li>
+                <li>WhatsApp: +91-98765-43210</li>
+                <li>Email: support@smartcrop.in</li>
+              </ul>
+            </div>
+          </div>
 
-      {/* Footer Bottom */}
-      <div className="mt-10 border-t border-white/20 pt-4 text-center text-sm text-white/80">
-        © 2024 Smart Crop Advisory. Made with ❤️ for Indian Farmers.
-      </div>
-    </footer>
+          {/* Footer Bottom */}
+          <div className="mt-10 border-t border-white/20 pt-4 text-center text-sm text-white/80">
+            © 2024 Smart Crop Advisory. Made with ❤️ for Indian Farmers.
+          </div>
+        </footer>
       </section>
     </div>
   );

@@ -1,65 +1,42 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { CameraIcon, Upload, RefreshCw } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import Image from "next/image";
-import ChatPage from "./_compnents/chatPlace";
+import ChatPage from "./_components/chatPlace";
 
-const Page = () => {
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [previewUrl, setPreviewUrl] = useState(null);
-
-  const fileInputRef = useRef(null);
-  const changePhotoRef = useRef(null);
-
-  const handleFileChange = (e) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
-      setSelectedFile(file);
-      setPreviewUrl((prev) => {
-        if (prev) URL.revokeObjectURL(prev);
-        return URL.createObjectURL(file); // preview image
-      });
-    }
-  };
-
-  useEffect(() => {
-    return () => {
-      if (previewUrl) URL.revokeObjectURL(previewUrl);
-    };
-  }, [previewUrl]);
-
-  const handleCheckDiseases = () => {
-    alert("Checking crop for diseases...");
-  };
-
+const AIChatPage = () => {
   return (
-    <div className="p-10">
-      <div className="flex flex-col gap-5 items-center justify-center">
-        <div className="flex flex-col items-center">
-          <h2 className="gradient-title text-3xl md:text-4xl xl:text-6xl">
-            
-            Weather & Alerts
-          </h2>
-          <p className="text-muted-foreground max-w-2xl sm:text-xs md:text-lg text-center">
-            Get latest weather information and essential crop alerts for better farming decisions.
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 p-4">
+      <div className="max-w-3xl mx-auto">
+        {/* Compact Header */}
+        <div className="text-center py-4 mb-4">
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" />
+              </svg>
+            </div>
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent">
+              Farm AI Assistant
+            </h1>
+          </div>
+          <p className="text-sm text-gray-600">
+            Ask about crops, diseases, or farming practices
           </p>
         </div>
 
-        <div className="w-full">
-          <ChatPage/>
+        {/* Chat Component */}
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+          <ChatPage />
+        </div>
+
+        {/* Subtle Tips */}
+        <div className="mt-4 text-center">
+          <p className="text-xs text-gray-500">
+            Try: "wheat diseases" • "planting tips" • "soil health"
+          </p>
         </div>
       </div>
     </div>
   );
 };
 
-export default Page;
+export default AIChatPage;
