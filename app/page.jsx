@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-
 import { CloudSun, MessageCircle } from "lucide-react";
 import Link from "next/link";
 import { features } from "@/lib/feature";
@@ -219,7 +218,7 @@ export default function Home() {
 
           {/* Footer Bottom */}
           <div className="mt-10 border-t border-white/20 pt-4 text-center text-sm text-white/80">
-            © 2024 Smart Crop Advisory. Made with ❤️ for Indian Farmers.
+            © 2025 Smart Crop Advisory. Made with ❤️ for Indian Farmers.
           </div>
         </footer>
       </section>
